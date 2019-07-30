@@ -1,0 +1,115 @@
+/*Footer Widget*/
+.footer-widget {}
+/*Title*/
+.footer-widget-title {
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+/*Footer Widget Text*/
+.footer-widget-text {
+    max-width: 280px;
+    & img {
+        margin-bottom: 25px;
+    }
+    & p {
+        margin-bottom: 25px;
+        &:last-child {
+            margin-bottom: 0;
+        }
+        & i {
+            width: 30px;
+            float: left;
+            line-height: 1.5;
+        }
+    }
+}
+
+/*Footer Widget Social*/
+.footer-socail {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: -5px;
+    margin-right: -5px;
+    & a {
+        display: block;
+        height: 32px;
+        width: 32px;
+        border: none;
+        background-color: $heading-color;
+        color: $white;
+        border-radius: 100%;
+        text-align: center;
+        margin-top: 5px;
+        margin-right: 5px;
+        & i {
+            font-size: 14px;
+            line-height: 32px;
+        }
+        &:hover {
+            background-color: $primary;
+            border-color: $primary;
+            color: $white;
+        }
+    }
+}
+
+/*Footer Widget Link*/
+.footer-widget-link {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    & li {
+        & + li {
+            margin-top: 5px;
+        }
+        & a {
+            position: relative;
+        }
+    }
+}
+
+/*Footer Widget Post*/
+.footer-widget-post {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    & li {
+        & + li {
+            margin-top: 15px;
+        }
+        & .title {
+            line-height: 1.25;
+            margin-bottom: 7px;
+        }
+        & .date {
+            display: block;
+            font-size: 14px;
+            line-height: 1;
+            opacity: 0.75;
+            & i {
+                margin-right: 5px;
+            }
+        }
+    }
+}
+
+/*Footer Widget Contact*/
+.footer-widget-contact {
+    max-width: 280px;
+    & p {
+        margin-bottom: 25px;
+        line-height: 1;
+        &:last-child {
+            margin-bottom: 0;
+        }
+        & i {
+            width: 30px;
+            float: left;
+            line-height: 1;
+        }
+        & a {
+            line-height: 1;
+        }
+    }
+}

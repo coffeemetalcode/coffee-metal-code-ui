@@ -1,0 +1,36 @@
+// Font Family
+$body-font: 'BenchNine', sans-serif;
+$heading-font: 'BenchNine', sans-serif;
+
+$fontawesome: 'FontAwesome';
+$icofont: IcoFont;
+
+// Colors ---------------
+
+$white: #ffffff;
+$black: #000000;
+$grey: #f1f1f1;
+
+// Body Color
+$body-color: #151515;
+
+// Heading Color
+$heading-color: #151515;
+
+// Template Colors
+$primary: #ef3345;
+$secondary: #f1f6fa;
+$success: #28a745;
+$danger: #dc3545;
+$warning: #ffc107;
+$info: #17a2b8;
+
+// Responsive Variables
+$extraBig-device : 'only screen and (min-width: 1500px)';
+$laptop-device : 'only screen and (min-width: 1200px) and (max-width: 1499px)';
+$desktop-device : 'only screen and (min-width: 992px) and (max-width: 1199px)';
+$tablet-device:'only screen and (min-width: 768px) and (max-width: 991px)';
+$large-mobile:'only screen and (max-width: 767px)';
+$small-mobile: 'only screen and (max-width: 575px)';
+$extra-small-mobile: 'only screen and (max-width: 479px)';
+

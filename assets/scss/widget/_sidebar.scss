@@ -1,0 +1,213 @@
+/*Sidebar Widget*/
+.widget {
+    box-shadow: 0 3px 15px rgba($black, 0.07);
+    transition: all 0.3s ease 0s;
+    padding: 30px;
+    margin-bottom: 30px;
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+/*Title*/
+.widget-title {
+    line-height: 1;
+    text-transform: capitalize;
+    margin-bottom: 25px;
+    &::after {
+        content: "";
+        width: 30px;
+        height: 2px;
+        background-color: $heading-color;
+        display: block;
+        margin-top: 10px;
+    }
+    @media #{$tablet-device, $large-mobile} {
+        padding-left: 0;
+    }
+}
+
+/*Sidebar Widget Search*/
+.widget-search {
+    & form {
+        position: relative;
+        & input[type="search"] {
+            padding-right: 50px;
+            padding-left: 20px;
+        }
+        & button {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 50px;
+            height: 50px;
+            border: none;
+            background-color: transparent;
+            text-align: center;
+            & i {
+                line-height: 50px;
+            }
+            &:hover {
+                color: $primary;
+            }
+        }
+    }
+}
+
+/*Sidebar Widget Link*/
+.widget-link {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    & li {
+        line-height: 1;
+        & + li {
+            margin-top: 20px;
+        }
+        & a {
+            line-height: 1;
+            &::before {
+                content: "\f178";
+                font-family: $fontawesome;
+                margin-right: 5px;
+                font-size: 16px;
+            }
+        }
+        &.active {
+            & a {
+                color: $primary;
+            }
+        }
+    }
+}
+
+/*Sidebar Widget Post*/
+.widget-post {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    & li {
+        display: block;
+        overflow: hidden;
+        & + li {
+            margin-top: 20px;
+        }
+        & .thumb {
+            float: left;
+            margin-right: 20px;
+            width: 80px;
+            height: 80px;
+            & img {
+                max-width: 100%;
+            }
+        }
+        & .content {
+            overflow: hidden;
+            & .title {
+                line-height: 1.25;
+                margin-bottom: 5px;
+            }
+            & .date {
+                display: block;
+                font-size: 16px;
+                line-height: 1;
+            }
+        }
+    }
+}
+
+/*Sidebar Widget Instagram*/
+.widget-instagram {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    padding: 0;
+    margin: -5px;
+    & li {
+        display: flex;
+        max-width: 25%;
+        padding: 5px;
+        & a {
+            position: relative;
+            overflow: hidden;
+            &::before {
+                position: absolute;
+                left: 0;
+                width: 100%;
+                top: 0;
+                height: 100%;
+                content: "";
+                background-color: $primary;
+                opacity: 0;
+                z-index: 2;
+                transition: all 0.3s ease 0s;
+            }
+            &::after {
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                width: 30px;
+                height: 30px;
+                line-height: 30px;
+                text-align: center;
+                margin-left: -15px;
+                margin-top: -15px;
+                content: "\f16d";
+                font-family: $fontawesome;
+                color: $white;
+                display: block;
+                font-size: 16px;
+                z-index: 3;
+                opacity: 0;
+                transition: all 0.3s ease 0s;
+            }
+            & img {
+                width: 100%;
+                transition: all 0.3s ease 0s;
+            }
+            &:hover {
+                &::before {
+                    opacity: 0.85;
+                }
+                &::after {
+                    opacity: 1;
+                }
+                & img {
+                    transform: scale(1.1);
+                }
+            }
+        }
+    }
+    // Responsive
+    @media #{$desktop-device, $extra-small-mobile} {
+        & li {
+            max-width: 33.33%;
+            flex: 1 0 33.33%;
+        }
+    }
+}
+
+/*Sidebar Widget Banner*/
+.widget-banner {}
+
+/*Sidebar Widget Tags*/
+.widget-tags {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -5px;
+    & a {
+        font-size: 18px;
+        line-height: 1;
+        font-weight: 600;
+        background-color: transparent;
+        color: $heading-color;
+        margin: 5px;
+        border: none;
+        &::after {
+            content: ",";
+            color: $heading-color;
+        }
+        &:hover, &.active {
+            color: $primary;
+        }
+    }
+}

@@ -1,0 +1,218 @@
+/*----------------------------------------*/
+/*  06. Portfolio CSS
+/*----------------------------------------*/
+
+/*Portfolio Title Section*/
+.portfolio-title-section {
+    padding-bottom: 350px;
+    
+    // Portfolio Section
+    & + .portfolio-section {
+        margin-top: -350px;
+    }
+}
+
+/*Isotope Filter(Portfolio Filter)*/
+.isotope-filter {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 40px;
+    & button {
+        border: none;
+        background-color: transparent;
+        padding: 0;
+        margin-right: 35px;
+        font-size: 24px;
+        line-height: 1;
+        font-weight: 700;
+        text-transform: uppercase;
+        border-bottom: 2px solid transparent;
+        margin-bottom: 10px;
+        &:last-child {
+            margin-right: 0;
+        }
+        &:hover, &.is-checked {
+            border-color: $primary;
+            color: $primary;
+        }
+    }
+    // Responsive
+    @media #{$large-mobile} {
+        margin-bottom: 20px;
+        & button {
+            font-size: 20px;
+            margin-right: 25px;
+        }
+    }
+}
+
+/*Portfolio*/
+.portfolio {
+    display: block;
+    position: relative;
+    & img {
+        width: 100%;
+    }
+    & .content {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        bottom: 20px;
+        left: 20px;
+        background-color: $white;
+        padding: 30px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        opacity: 0;
+        transition: all 0.5s ease 0s;
+        & .title {
+            line-height: 1.25;
+            margin-bottom: 10px;
+            text-transform: capitalize;
+        }
+        & .category {
+            display: block;
+            line-height: 1;
+            color: $heading-color;
+            opacity: 0.5;
+        }
+    }
+    &:hover {
+        & .content {
+            opacity: 1;
+        }
+    }
+}
+
+
+/*Portfolio Details(Single Portfolio)*/
+
+/*Image*/
+.portolio-details-image {
+    & img {
+        width: 100%;
+    }
+}
+/*Slider*/
+.portolio-details-image-slider {
+    & .slick-arrow {
+        background-color: $white;
+        color: $heading-color;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        &:hover {
+            background-color: $primary;
+            color: $white;
+        }
+        & i {
+            font-size: 18px;
+            line-height: 1;
+        }
+        &.slick-prev {
+            left: 30px;
+        }
+        &.slick-next {
+            right: 30px;
+        }
+    }
+    // Responsive
+    @media #{$large-mobile} {
+        & .slick-arrow {
+            width: 40px;
+            height: 40px;
+            &.slick-prev {
+                left: 20px;
+            }
+            &.slick-next {
+                right: 20px;
+            }
+        }
+    }
+    @media #{$extra-small-mobile} {
+        & .slick-arrow {
+            width: 30px;
+            height: 30px;
+            & i {
+                font-size: 14px;
+            }
+            &.slick-prev {
+                left: 10px;
+            }
+            &.slick-next {
+                right: 10px;
+            }
+        }
+    }
+}
+/*Content*/
+.portolio-details-content {
+    & .title {
+        line-height: 1.2;
+        margin-bottom: 0;
+        &:not(:last-child) {
+            margin-bottom: 15px;
+        }
+    }
+    & .desc {
+        &:not(:last-child) {
+            margin-bottom: 30px;
+        }
+        & p {}
+    }
+    & .details {
+        list-style: none;
+        padding: 0;
+        &:not(:last-child) {
+            margin-bottom: 30px;
+        }
+        & li {
+            display: flex;
+            flex-wrap: wrap;
+            & + li {
+                margin-top: 5px;
+            }
+            & span {
+                width: 90px;
+                padding-right: 15px;
+                font-weight: 700;
+                &::after {
+                    content: ":";
+                    float: right;
+                }
+            }
+            & a {}
+        }
+    }
+    & .socail {
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: -5px;
+        margin-right: -5px;
+        & a {
+            display: block;
+            height: 32px;
+            width: 32px;
+            border: none;
+            background-color: $heading-color;
+            color: $white;
+            border-radius: 100%;
+            text-align: center;
+            margin-top: 5px;
+            margin-right: 5px;
+            & i {
+                font-size: 14px;
+                line-height: 32px;
+            }
+            &:hover {
+                background-color: $primary;
+                border-color: $primary;
+                color: $white;
+            }
+        }
+    }
+}

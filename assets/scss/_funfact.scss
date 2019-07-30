@@ -1,0 +1,21 @@
+/*----------------------------------------*/
+/*  09. Funfact CSS
+/*----------------------------------------*/
+.funfact {
+    & .counter {
+        font-weight: 700;
+        line-height: 1;
+        position: relative;
+        &::after {
+            position: absolute;
+            top: -20px;
+            font-weight: 300;
+            content: "+";
+            color: $primary;
+        }
+    }
+    & .title {
+        line-height: 1;
+        margin: 0;
+    }
+}

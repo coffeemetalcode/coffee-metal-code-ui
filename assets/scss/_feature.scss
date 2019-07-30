@@ -1,0 +1,44 @@
+/*----------------------------------------*/
+/*  08. Feature CSS
+/*----------------------------------------*/
+
+/*Feature Background Image*/
+.feature-bg-1 {
+    background-image: url(../images/bg/bg-1.png);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+/*Feature*/
+.feature {
+    max-width: 250px;
+    & .icon {
+        margin-bottom: 15px;
+        & img {}
+    }
+    & .content {
+        & .title {}
+        & .desc {
+            font-size: 20px;
+            line-height: 1.25;
+        }
+    }
+}
+
+/*Service Slider*/
+.service-slider {
+    & .slick-slide {
+        & [class*="col"] {
+            display: flex !important;
+            justify-content: center;
+        }
+    }
+    @media #{$small-mobile} {
+        & .slick-slide {
+            & [class*="col"] {
+                justify-content: flex-start;
+            }
+        }
+    }
+}

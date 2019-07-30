@@ -1,0 +1,27 @@
+.skill {
+    & .title {
+        font-weight: 700;
+        line-height: 1;
+    }
+    & .progress {
+        border-radius: 50px;
+        background-color: #ececec;
+        height: 8px;
+        overflow: visible;
+        & .progress-bar {
+            border-radius: 50px;
+            background-color: $heading-color;
+            position: relative;
+            &::before {
+                position: absolute;
+                right: 0;
+                bottom: 15px;
+                content: attr(data-value);
+                font-size: 20px;
+                line-height: 1;
+                font-weight: 700;
+                color: $heading-color;
+            }
+        }
+    }
+}

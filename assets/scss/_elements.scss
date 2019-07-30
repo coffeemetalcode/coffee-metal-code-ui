@@ -1,0 +1,79 @@
+/*----------------------------------------*/
+/*  02. Elements CSS
+/*----------------------------------------*/
+
+/*Buttons*/
+.btn {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 30px;
+    text-transform: capitalize;
+    letter-spacing: 0.5px;
+    padding: 10px 30px;
+    border-radius: 50px;
+    color: $white;
+    background-color: $heading-color;
+    border: none;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+    // Hover
+    &:hover {
+        background-color: $primary;
+        color: $white;
+    }
+}
+
+/*BlockQuote*/
+blockquote {
+    background-color: #f6f6f6;
+    padding: 20px 30px;
+    &::before {
+        content: '\f10d';
+        font-family: $fontawesome;
+        font-size: 36px;
+        line-height: 1;
+        margin-right: 5px;
+        position: relative;
+        bottom: -3px;
+        color: $primary;
+    }
+    & p {
+        display: inline;
+        font-size: 24px;
+        font-style: italic;
+        color: $heading-color;
+        line-height: 1.35;
+        font-weight: 500;
+    }
+}
+
+/*Skills*/
+.skill {
+    & .title {
+        font-weight: 700;
+        line-height: 1;
+    }
+    & .progress {
+        border-radius: 50px;
+        background-color: #ececec;
+        height: 8px;
+        overflow: visible;
+        & .progress-bar {
+            border-radius: 50px;
+            background-color: $heading-color;
+            position: relative;
+            &::before {
+                position: absolute;
+                right: 0;
+                bottom: 15px;
+                content: attr(data-value);
+                font-size: 20px;
+                line-height: 1;
+                font-weight: 700;
+                color: $heading-color;
+            }
+        }
+    }
+}

@@ -1,0 +1,246 @@
+/*----------------------------------------*/
+/*  04. Main Slider CSS
+/*----------------------------------------*/
+
+/*Slider Background Image*/
+.slider-bg-1 {
+    background-image: url(../images/slider/slider-1.jpg);
+}
+.slider-bg-2 {
+    background-image: url(../images/slider/slider-2.jpg);
+}
+
+/*Main Slider One*/
+.main-slider-1 {
+    height: 800px;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    // Responsive
+    @media #{$laptop-device} {
+        height: 600px;
+    }
+    @media #{$desktop-device} {
+        height: 550px;
+    }
+    @media #{$tablet-device} {
+        height: 400px;
+    }
+    @media #{$large-mobile} {
+        height: 300px;
+    }
+    @media #{$small-mobile} {
+        height: 250px;
+    }
+    @media #{$extra-small-mobile} {
+        height: 200px;
+    }
+}
+/*Main Slider One Content*/
+.main-slider-content {
+    & h2 {
+        font-size: 55px;
+        line-height: 1;
+        font-weight: 300;
+    }
+    & h1 {
+        font-size: 90px;
+        line-height: 1;
+        font-weight: 700;
+    }
+    & a {
+        font-size: 36px;
+        line-height: 1.05;
+        color: $heading-color;
+        border-bottom: 2px solid $heading-color;
+        position: relative;
+        margin-top: 40px;
+        &::before {
+            content: "";
+            position: absolute;
+            right: 0;
+            bottom: -2px;
+            width: 0;
+            height: 2px;
+            background-color: $primary;
+            transition: all 0.3s ease 0s;
+        }
+        &:hover {
+            &::before {
+                width: 100%;
+                left: 0;
+                right: auto;
+            }
+        }
+    }
+    // Responsive
+    @media #{$desktop-device} {
+        & h2 {
+            font-size: 50px;
+        }
+        & h1 {
+            font-size: 80px;
+        }
+        & a {
+            font-size: 30px;
+            margin-top: 30px;
+        }
+    }
+    @media #{$tablet-device} {
+        & h2 {
+            font-size: 40px;
+        }
+        & h1 {
+            font-size: 60px;
+        }
+        & a {
+            font-size: 24px;
+            margin-top: 25px;
+        }
+    }
+    @media #{$large-mobile} {
+        & h2 {
+            font-size: 36px;
+        }
+        & h1 {
+            font-size: 50px;
+        }
+        & a {
+            font-size: 20px;
+            margin-top: 20px;
+        }
+    }
+    @media #{$small-mobile} {
+        & h2 {
+            font-size: 30px;
+        }
+        & h1 {
+            font-size: 40px;
+        }
+        & a {
+            font-size: 20px;
+            margin-top: 15px;
+        }
+    }
+    @media #{$extra-small-mobile} {
+        & h2 {
+            font-size: 24px;
+        }
+        & h1 {
+            font-size: 32px;
+        }
+        & a {
+            font-size: 18px;
+            margin-top: 10px;
+        }
+    }
+}
+
+/*Main Slider Two*/
+.main-slider-2 {
+    height: 950px;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    // Responsive
+    @media #{$laptop-device} {
+        height: 600px;
+    }
+    @media #{$desktop-device} {
+        height: 550px;
+    }
+    @media #{$tablet-device} {
+        height: 400px;
+    }
+    @media #{$large-mobile} {
+        height: 300px;
+    }
+    @media #{$small-mobile} {
+        height: 250px;
+    }
+    @media #{$extra-small-mobile} {
+        height: 200px;
+    }
+}
+/*Main Slider Two Content*/
+.main-slider-content-2 {
+    & h2 {
+        font-size: 55px;
+        line-height: 1;
+        font-weight: 300;
+    }
+    & h1 {
+        font-size: 90px;
+        line-height: 1;
+        font-weight: 700;
+    }
+    & .btn {
+        margin-top: 40px;
+        font-size: 24px;
+        padding: 10px 40px;
+    }
+    // Responsive
+    @media #{$desktop-device} {
+        & h2 {
+            font-size: 50px;
+        }
+        & h1 {
+            font-size: 80px;
+        }
+        & .btn {
+            margin-top: 30px;
+        }
+    }
+    @media #{$tablet-device} {
+        & h2 {
+            font-size: 40px;
+        }
+        & h1 {
+            font-size: 60px;
+        }
+        & .btn {
+            margin-top: 25px;
+        }
+    }
+    @media #{$large-mobile} {
+        & h2 {
+            font-size: 36px;
+        }
+        & h1 {
+            font-size: 50px;
+        }
+        & .btn {
+            font-size: 20px;
+            padding: 5px 30px;
+            margin-top: 20px;
+        }
+    }
+    @media #{$small-mobile} {
+        & h2 {
+            font-size: 30px;
+        }
+        & h1 {
+            font-size: 40px;
+        }
+        & .btn {
+            font-size: 18px;
+            padding: 3px 25px;
+            margin-top: 15px;
+        }
+    }
+    @media #{$extra-small-mobile} {
+        & h2 {
+            font-size: 24px;
+        }
+        & h1 {
+            font-size: 32px;
+        }
+        & .btn {
+            margin-top: 10px;
+        }
+    }
+}

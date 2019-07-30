@@ -1,0 +1,35 @@
+.accordion {
+    & .card {
+        border: none;
+        border-radius: 0;
+        border-top: 1px solid #eeeeee;
+        & .card-header {
+            border: none;
+            background-color: transparent;
+            padding: 0;
+            & [data-toggle="collapse"] {
+                display: block;
+                padding: 15px 0;
+                border: none;
+                background-color: transparent;
+                margin: 0;
+                font-size: 20px;
+                font-family: $heading-font;
+                color: $heading-color;
+                &::after {
+                    font-size: 90%;
+                    content: "\f107";
+                    font-family: $fontawesome;
+                    margin-left: 15px;
+                    color: $primary;
+                }
+            }
+        }
+        & .collapse, .collapsing {
+            margin: 0;
+            & .card-body {
+                padding: 0 0 20px;
+            }
+        }
+    }
+}

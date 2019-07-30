@@ -1,0 +1,34 @@
+.nav-tabs {
+    border-top: 1px solid #eeeeee;
+    border-bottom: 1px solid #eeeeee;
+    & .nav-item {
+        margin: 0;
+        & .nav-link {
+            margin: 0;
+            border: none;
+            padding: 15px 20px;
+            position: relative;
+            border-right: 1px solid #eeeeee;
+            &::before {
+                content: "";
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                width: 100%;
+                height: 3px;
+                background-color: $primary;
+                opacity: 0;
+            }
+            &.active {
+                &::before {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}
+.tab-content {
+    &:not(:first-child) {
+        margin-top: 25px;
+    }
+}

@@ -1,0 +1,62 @@
+/*----------------------------------------*/
+/*  05. About CSS
+/*----------------------------------------*/
+
+/*About Me*/
+.about-me-image {}
+.about-me-content {
+    & > .name {
+        line-height: 1;
+        font-weight: 700;
+    }
+    & > .title {
+        line-height: 1;
+        margin-bottom: 0;
+    }
+    & > .desc {
+        margin: 25px 0;
+    }
+}
+
+/*About Us*/
+.about-us-image {
+    position: relative;
+    & .video-popup {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translateX(-50%) translateY(-50%);
+        width: 80px;
+        height: 80px;
+        background-color: $white;
+        color: $primary;
+        border-radius: 50%;
+        text-align: center;
+        & i {
+            font-size: 24px;
+            line-height: 80px;
+        }
+        &:hover {
+            background-color: $primary;
+            color: $white;
+            transform: translateX(-50%) translateY(-50%) scale(1.25);
+        }
+    }
+}
+.about-us-content {
+    padding-left: 50px;
+    padding-right: 50px;
+    & .title {
+        line-height: 1.1;
+        font-weight: 700;
+        margin: 0;
+    }
+    & .desc {
+        margin-top: 25px;
+    }
+    // Responsive
+    @media #{$desktop-device, $tablet-device, $large-mobile} {
+        padding-left: 0;
+        padding-right: 0;
+    }
+}

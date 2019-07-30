@@ -1,0 +1,74 @@
+/*----------------------------------------*/
+/*  14. Footer CSS
+/*----------------------------------------*/
+.footer-section {}
+
+/*Footer CTA*/
+.footer-cta {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    border-bottom: 1px solid #e4e8eb;
+    & .title {
+        padding-right: 30px;
+        line-height: 1.25;
+        margin-bottom: 0;
+    }
+    & .btn {
+        font-size: 24px;
+        padding: 10px 40px;
+    }
+    // Responsive
+    @media #{$tablet-device} {
+        & .title {
+            font-size: 30px;
+        }
+    }
+    @media #{$large-mobile} {
+        padding-top: 50px;
+        padding-bottom: 50px;
+        & .title {
+            font-size: 24px;
+        }
+        & .btn {
+            font-size: 20px;
+            padding: 5px 30px;
+        }
+    }
+}
+
+/*Footer Top*/
+.footer-middle {
+    padding-top: 90px;
+    padding-bottom: 90px;
+    // Responsive
+    @media #{$laptop-device, $desktop-device} {
+        padding-top: 80px;
+        padding-bottom: 80px;
+    }
+    @media #{$tablet-device} {
+        padding-top: 70px;
+        padding-bottom: 70px;
+    }
+    @media #{$large-mobile} {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+}
+
+/*Footer Bottom*/
+.footer-bottom {
+    padding: 20px 0;
+    border-top: 1px solid #e4e8eb;
+}
+.copyright {
+    & p {
+        text-align: center;
+        font-size: 16px;
+        & a {
+            color: $primary;
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+}

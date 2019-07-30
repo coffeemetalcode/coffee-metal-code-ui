@@ -1,0 +1,248 @@
+/*----------------------------------------*/
+/*  11. Blog CSS
+/*----------------------------------------*/
+
+/*Blog*/
+.blog {
+    box-shadow: 0 3px 15px rgba($black, 0.07);
+    transition: all 0.3s ease 0s;
+    
+    // Hover
+    &:hover {
+        box-shadow: 0 10px 30px rgba($black, 0.15);
+    }
+    
+    // Image
+    & .thumb {
+        display: block;
+        & img {
+            width: 100%;
+        }
+    }
+    
+    // Content
+    & .content {
+        padding: 30px;
+        overflow: hidden;
+        & .title {
+            line-height: 1.1;
+            font-weight: 700;
+            margin-bottom: 15px;
+            & a {}
+        }
+        & .date {
+            display: block;
+            margin-bottom: 10px;
+        }
+        & .desc {
+            margin-bottom: 20px;
+        }
+        & .read-more {
+            & i {
+                margin-left: 3px;
+                transition: all 0.3s ease 0s;
+            }
+            &:hover {
+                & i {
+                    margin-left: 10px;
+                }
+            }
+        }
+    }
+}
+
+/*Single Blog*/
+.single-blog {
+    box-shadow: 0 3px 15px rgba($black, 0.07);
+    // Image
+    & .thumb {
+        display: block;
+        & img {
+            width: 100%;
+        }
+    }
+    // Content
+    & .content {
+        padding: 30px;
+        overflow: hidden;
+        & .title {
+            line-height: 1.1;
+            font-weight: 700;
+            margin-bottom: 15px;
+            & a {}
+        }
+        & .meta {
+            display: flex;
+            flex-wrap: wrap;
+            list-style: none;
+            padding-left: 0;
+            margin-bottom: 10px;
+            & li {
+                margin-right: 10px;
+                &::before {
+                    content: "-";
+                    margin-right: 10px;
+                }
+                &:last-child {
+                    margin-right: 0;
+                }
+                &:first-child {
+                    &::before {
+                        display: none;
+                    }
+                }
+                & a {}
+            }
+        }
+        & .desc {
+            margin-bottom: 20px;
+        }
+        // Blockquote
+        & blockquote {
+            margin: 25px 0;
+            
+        }
+        // Blog Footer
+        & .blog-footer {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-top: 15px;
+            // Tags
+            & .blog-tags {
+                display: flex;
+                flex-wrap: wrap;
+                align-items: center;
+                margin-top: 15px;
+                & h6 {
+                    margin-bottom: 0;
+                    line-height: 1;
+                    margin-right: 10px;
+                }
+                & a {
+                    margin-right: 5px;
+                    line-height: 1;
+                    // Before & After Element
+                    &::after {
+                        content: ',';
+                        color: $body-color;
+                    }
+                    &:last-child {
+                        &::after {
+                            display: none;
+                        }
+                    }
+                }
+            }
+            // Share
+            & .blog-share {
+                display: flex;
+                flex-wrap: wrap;
+                margin-top: 15px;
+                & a {
+                    color: $body-color;
+                    text-align: center;
+                    margin-right: 15px;
+                    line-height: 1;
+                    // Child Element
+                    &:last-child {
+                        margin-right: 0;
+                    }
+                    & i {
+                        display: block;
+                        font-size: 16px;
+                        line-height: 1;
+                    }
+                    // Hover
+                    &:hover {
+                        color: $primary;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/*Blog Comment Wrap*/
+.comment-wrap {
+    margin-top: 50px;
+    & h4 {
+        line-height: 1;
+        margin-bottom: 30px;
+    }
+}
+
+/*Comment List*/
+.comment-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    & li {
+        & .children {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            margin-left: 50px;
+        }
+    }
+    // Responsive
+    @media #{$small-mobile}{
+        & li {
+            & .children {
+                margin: 0;
+            }
+        }
+    }
+}
+
+/*Single Comment*/
+.single-comment {
+    margin-bottom: 30px;
+    // Image
+    & .image {
+        width: 95px;
+        float: left;
+        margin-right: 25px;
+        & img {
+            width: 100%;
+        }
+    }
+    // Content
+    & .content {
+        overflow: hidden;
+        & .name-date {
+            display: block;
+            margin-bottom: 6px;
+            line-height: 1;
+            & span {
+                font-size: 16px;
+                font-weight: 400;
+                &::before {
+                    content: "-";
+                    margin: 0 10px;
+                }
+            }
+        }
+        & p {
+            margin-bottom: 5px;
+        }
+        & .reply {
+            display: inline-block;
+            font-weight: 600;
+            color: #656565;
+            line-height: 16px;
+            text-transform: capitalize;
+            &:hover {
+                color: $primary;
+            }
+        }
+    }    
+    // Responsive
+    @media #{$small-mobile}{
+        & .image {
+            float: none;
+            margin-bottom: 15px;
+            margin-right: 0;
+        }
+    }
+}
